@@ -1,0 +1,88 @@
+//Styling for the Drop down Recipe Add Form.
+
+.recipeform {
+	width: 350px;
+	position: absolute;
+	top: -1000px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 10;
+	background: $leafGreen;
+	transition: all 1s ease;
+	padding: 15px;
+	border: 3px solid $darkGreen;
+	border-radius: 10px;
+}
+
+.recipeform.show{
+	top: 10px;
+}
+
+.close-button{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	color: white;
+	p{
+		margin: 0;
+		margin-right: 10px;
+		font-family: $baseFont;
+		font-size: 16px;
+		text-transform: uppercase;
+	}
+	i{
+		font-size: 25px;
+	}
+}
+
+.labels-inputs{
+	display: flex;
+	flex-direction: column;
+	color: white;
+	label{
+		font-family: $baseFont;
+		font-size: 18px;
+		text-transform: uppercase;
+		letter-spacing: 1px;	
+		margin-botton: 10px;
+	}
+	input[type=file]{
+		margin-bottom: 5px;
+	}
+	input[type=text]{
+		padding: 5px 2px;
+		margin-bottom: 10px;
+		background-color: rgba(255, 255, 255, 0.6);
+		border: none;
+	}
+	input[type=submit]{
+		align-self: center;
+		padding: 5px 15px;
+		background-color: rgba(255, 255, 255, 0);
+		border: 3px solid white;
+		border-radius: 5px;
+		color: white;
+		font-family: $baseFont;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		transition: all 1s ease;
+		&:hover{
+			background-color: rgb(255,255,255);
+			color: $leafGreen;
+		}
+	}
+	textarea{
+		height: 175px;
+		margin-bottom: 10px;
+		background-color: rgba(255, 255, 255, 0.6);
+		border: none;
+	}
+}
+
+//Responsive Stuff
+
+@media (max-width: 480px) {
+	.recipeform{
+		max-width: 300px;
+	}
+}

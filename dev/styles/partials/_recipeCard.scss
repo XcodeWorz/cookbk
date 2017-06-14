@@ -1,0 +1,108 @@
+
+//Styling for the Recipe Card Areas in the all Sections
+
+.main-section, .public-section, .favourite-section{
+	display: flex;
+	flex-wrap:wrap;
+}
+
+.recipe-card, .public-card, .favourite-card{
+	flex: 1 0 300px;
+	background: white;
+	box-shadow: 3px 4px 3px rgba(0,0,0,0.6);
+	margin: 15px;
+	position: relative;
+	.recipe-img{
+		img{
+			width: 100%;
+		}
+	}
+	.recipe-text{
+		padding: 15px;
+		h3{
+			color: $leafGreen;
+		}
+	}
+}
+
+.delete-button{
+	padding: 10px 15px;
+	font-size: 20px;
+	color: $leafGreen;
+	display: flex;
+	justify-content: space-between;
+	.delete-post{
+		display: flex;
+		align-items: center;
+		p{
+			margin: 0;
+			margin-left: 10px;
+			font-size: 14px;
+			font-family: $baseFont;
+			text-transform: uppercase;
+		}
+	}
+	.delete-post:hover{
+		color: red;
+	}
+	.make-public{
+		display: flex;
+		align-items: center;
+		p{
+			margin: 0;
+			margin-right: 10px;
+			font-size: 14px;
+			font-family: $baseFont;
+			text-transform: uppercase;
+		}
+	}
+	.make-public:hover{
+		color: royalblue;
+	}
+}
+
+.favourite{
+	display: flex;
+	justify-content: flex-end;
+	color: $leafGreen;
+	transition: all 0.5s;
+	.favourite-click{
+		display:flex;
+		align-items: center;
+	}
+	.favourite-click:hover{
+		color: goldenrod;
+
+	}
+	p{
+		margin: 0;
+		margin-right: 10px;
+		font-size: 14px;
+		font-family: $baseFont;
+		text-transform: uppercase;
+	}
+}
+
+.delete-post{
+	color: $leafGreen;
+	display: flex;
+	align-items: center;
+	p{
+		margin: 0;
+		margin-left: 10px;
+		font-family: $baseFont;
+		font-size: 14px;
+		text-transform: uppercase;
+	}
+	&:hover{
+		color: red;
+	}
+}
+
+//Responsive Stuff
+
+@media (max-width: 480px) {
+	.recipe-card{
+		margin: 5px;
+	}
+}

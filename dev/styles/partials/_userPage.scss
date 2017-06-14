@@ -1,0 +1,51 @@
+//User page styling
+
+.user-header{
+	padding: 15px 15px;
+	background-color: rgba(255, 255, 255, 0.8);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	h2{
+		margin: 0;
+		font-family: $baseFont;
+		font-size: 30px;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		color: $leafGreen;
+	}
+	button{
+		padding: 5px 10px;
+		background-color: rgba(0,0,0,0);
+		border: 3px solid $leafGreen;
+		border-radius: 8px;
+		text-transform: uppercase;
+		letter-spacing: 1.5px;
+		font-family: $baseFont;
+		color: $leafGreen;
+		transition: all 0.5s;
+		&:hover{
+			color: white;
+			background-color: $leafGreen;
+		}
+	}
+}
+
+.fav-main, .public-main{
+	h2{
+		text-align: center;
+		font-family: $titleFont;
+		font-size: 45px;
+		color: $leafGreen;
+	}
+}
+
+//Responsive stuff
+
+@media (max-width: 480px) {
+	.user-header{
+		h2{
+			font-size: 20px;
+		}
+	}
+}
